@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+body {
+
+ 
+	}
+
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+</head>
+<body id="bid">
+
+ 
+<div id="div1"></div>
+ 
+<input type="text" id="in"/>
+<input type="submit"  onclick="func()"></input>
+
+
+<script>
+function func()
+{
+   var ret = document.getElementById("in").value;
+   
+if(ret!="")
+   {
+switch(ret) {
+    case '1':
+      
+ alert("No Difference");
+
+        break;
+ case '2':
+ var ip = prompt("Enter the age");
+
+var a=checkAge(ip);
+alert(a);
+ 
+        break;
+    case '3':
+
+	var no = prompt("Enter the first number");
+	var no1 = prompt("Enter the Second number");
+	
+	var a=min(no,no1);
+	alert(a);
+	break;
+case '4':
+var a = prime(100);
+
+alert(a);
+
+break;
+case '5':
+function myImmediateFunction () {
+    var foo = "bar";
+	console.log(foo);
+}
+
+myImmediateFunction();
+console.log(foo);
+ 
+
+break;
+case '6':
+function foo(){
+    function bar() {
+        return 3;
+    }
+    return bar();
+    function bar() {
+        return 8;
+    }
+}
+alert(foo());
+
+var a = function() {
+    return 3;
+}
+ 
+var a = function bar() {
+    return 3;
+}
+ (function sayHello() {
+    alert("hello!");
+})();
+
+break;
+case '7':
+
+
+break;
+case '8':
+
+break;
+
+
+
+
+  
+ 
+
+}
+}
+
+		
+
+}
+
+function checkAge(age)
+		{
+	return	( age>18 ? "true" : confirm('Did parents allow you?') );
+		}
+		
+		function min(no,no1)
+		{
+		return ((no>no1)?  no1+" is min" : no+" is min");
+		}
+		
+		
+		function prime(n)
+{
+
+var a="";
+for (var counter = 0; counter <= 100; counter++) {
+
+    var notPrime = false;
+    for (var i = 2; i <= counter; i++) {
+        if (counter%i===0 && i!==counter) {
+            notPrime = true;
+        }
+    }
+    if (notPrime === false) {
+         a+=counter+"," ;     
+    }
+}
+return a;
+}
+
+      function count() {
+
+  var i = 0;
+
+  return function() {
+   return( ++i );
+  };
+}
+
+function date()
+{
+var currentdate = new Date(); 
+var datetime = " " + currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + "  "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+      
+	  console.log(datetime);
+	  }
+	  
+	  function bg()
+	  {
+document.body.style.backgroundColor = "red";
+	  }
+	  function day()
+	  {
+	  var currentdate = new Date(); 
+	  alert(currentdate.getDay());
+	  }
+	  
+	  
+	  function age(age)
+	  {
+	 
+
+ if(age>=13 && age<=19)
+ alert("teenager");
+else
+ alert("not a teenager");
+
+	  }
+	  
+	  function loc()
+	  {
+	alert(window.location.href);
+
+	  }
+	  
+</script>
+
+
+   
+  
+  </form>
+</div>
+
+</body>
+</html>
